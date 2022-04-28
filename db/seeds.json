@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Rachel",
+		"email": "rachel@me.com",
+        "comments": "Hello everyone!"
+	},
+	{
+		"name": "Chai",
+		"email": "chai@me.com",
+        "comments": "Bonjour tout le monde!"
+	},
+	{
+		"name": "Jing",
+		"email": "jing@me.com",
+        "comments": "Marhaban habibti!"
+	},
+	{
+		"name": "Sambhava",
+		"email": "sambhava@me.com",
+        "comments": "Greetings from Earth!"
+	}
+]
