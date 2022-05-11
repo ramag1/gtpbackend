@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
 // Update: Edit an inquiry by id
 // http://localhost:3111/inquiries/id
 router.put('/:id', (req, res) => {
-	Inquiries.findByIdAndUpdate({ _id: req.params.id }, req.body, {
+	Inquiry.findByIdAndUpdate({ _id: req.params.id }, req.body, {
 		new: true,
 	}).then((comment) => {
 		res.json(comment);
