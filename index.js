@@ -38,7 +38,7 @@ app.post('/inquiries', (req, res) => {
 		subject: `${req.body.name} at ${req.body.email} has submitted an inquiry.`,
 		text: req.body.comments,
 	};
-
+	
 	transporter.sendMail(mailOptions, (error, info)=> {
 		if(error){
 			console.log(error);
