@@ -38,7 +38,7 @@ app.post('/inquiries', (req, res) => {
 		subject: `${req.body.name} at ${req.body.email} has submitted an inquiry.`,
 		text: req.body.comments,
 	};
-	
+
 	transporter.sendMail(mailOptions, (error, info)=> {
 		if(error){
 			console.log(error);
@@ -56,6 +56,12 @@ app.post('/inquiries', (req, res) => {
 // Forward all requests to localhost:3111/inquiries to the inquiry controller
 app.use('/inquiries', inquiryController);
 
-app.listen(3111, () => {
-	console.log('Inquiries are here on port 3111');
+// app.listen(3111, () => {
+// 	console.log('Inquiries are here on port 3111');
+// });
+
+app.set('port', process.env.PORT || 8000);
+
+app.listen(app.get('port'), () => {
+	console.log(`✅ PORT: ${app.get('port')} 🌟`);
 });
